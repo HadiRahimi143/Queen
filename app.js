@@ -7,6 +7,7 @@ var expresslayouts = require('express-ejs-layouts')
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
+var contactRouter = require('./routes/contact');
 
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/contact', contactRouter)
 
 
 // catch 404 and forward to error handler
