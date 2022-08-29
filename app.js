@@ -4,11 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expresslayouts = require('express-ejs-layouts')
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var contactRouter = require('./routes/contact');
 
+//var dburl = process.env.DATABASE_URL
 
 var app = express();
 
